@@ -1,0 +1,23 @@
+.trending_container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.trending_heading{
+    
+    margin-top: -15px;
+    line-height: 0;
+    color: white;
+}
+.trending_heading h2{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+.trending_heading p{
+    font-size: 20px;
+}
+.trending_icon{
+  color: rgb(6, 114, 6);
+  margin-right: 10px;
+}

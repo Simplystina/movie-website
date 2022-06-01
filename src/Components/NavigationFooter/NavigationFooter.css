@@ -1,0 +1,27 @@
+.navigation_footer_container{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(1, 22, 27);
+}
+.navigation_footer{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    color: white;
+    line-height: 0;
+    padding: 20px;
+}
+.navigation_footer_content{
+    margin: 0  10px;
+}
+.navigation_footer span{
+     color: white;
+     font-size: 25px;
+}
+.navigation_footer p{
+   font-size: 18px;
+     
+}
