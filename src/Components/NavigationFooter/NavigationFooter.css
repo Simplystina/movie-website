@@ -12,7 +12,7 @@
     margin: 0 auto;
     color: white;
     line-height: 0;
-    padding: 20px;
+    padding: 10px;
 }
 .navigation_footer_content{
     margin: 0  10px;
@@ -22,6 +22,10 @@
      font-size: 25px;
 }
 .navigation_footer p{
-   font-size: 18px;
+   font-size: 17px;
      
+}
+.nav_footer_links{
+    text-decoration: none;
+    color: white;
 }

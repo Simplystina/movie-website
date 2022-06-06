@@ -1,0 +1,21 @@
+.genres_container{
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.genre{
+    padding: 3px 8px;
+    margin: 5px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.active{
+    color: rgb(13, 207, 13);
+    background-color: #021d23b1;
+}
+.not_active{
+    background-color: #053a46;
+    color: whitesmoke;
+}

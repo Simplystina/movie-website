@@ -8,4 +8,33 @@ body {
   background-color: rgb(0, 36, 44);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.page_container{
+  width: 80%;
+  margin: 0 auto 2rem auto;
+}
+
+.page_heading{
+  
+  margin-top: -15px;
+  line-height: 0;
+  color: white;
+}
+.page_heading h2{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+.page_heading p{
+  font-size: 20px;
+  padding-top: 0;
+  margin-top: 0;
+}
+.page_icon{
+color: rgb(6, 114, 6);
+margin-right: 10px;
+}
 

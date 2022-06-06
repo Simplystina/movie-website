@@ -1,2 +1,6 @@
 export {default as Home} from './Home/Home'
 export {default as Trending} from './Trending/Trending'
+export {default as Movies} from './Movies/Movies'
+export {default as TvShows} from './TvShows/TvShows'
+export {default as Search} from './Search/Search'
+export {default as SingleMovieDetail} from './SingleMovieDetail/SingleMovieDetail'

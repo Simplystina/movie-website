@@ -1,0 +1,51 @@
+.pagination{
+    margin: 3rem 0 6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page_number{
+    margin:  3px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 10px;
+    transition: all .2s linear;
+    color: #036479 ;
+    background-color: rgb(26, 220, 26) ;
+};
+
+.active{
+    background-color: rgb(26, 220, 26);
+    font-weight: 500;
+}
+.not_active{
+    color: rgba(245, 245, 245, 0.753);
+    background-color: #036479;
+    font-weight: 500;
+}
+.page_number:hover{
+    background-color: rgb(26, 220, 26) !important;
+    color: #036479 !important;
+}
+.next, .prev{
+    margin:  3px;
+    border-radius: 7px;
+    background-color: #036479;
+    text-align: center;
+    color: rgba(245, 245, 245, 0.753);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 8px;
+    transition: all .3s linear;
+}
+.prev:hover{
+    background-color: rgb(42, 224, 42);
+    color: #036479;
+ }
+ .next:hover{
+    background-color: rgb(42, 224, 42);
+    color: #036479;
+ }

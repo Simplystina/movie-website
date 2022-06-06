@@ -1,0 +1,23 @@
+.loader_container{
+    height: 40vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: #00242c,
+}
+.loader_container span {
+		display: block;
+		width: 70px;
+		height: 70px;
+		border-radius: 50%;
+		border: 2px solid transparent;
+		border-top-color: #81e291;
+		animation: spin 1s ease-out infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotateZ(360deg);
+		}
+	}
