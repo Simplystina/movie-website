@@ -1,6 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-//import { getMovies, updateID } from '../../features/moviesSlice';
+import { useDispatch } from 'react-redux';
 import './Genre.css'
 
 
@@ -21,7 +20,7 @@ const Genre = ({genresList, movieId, pageNumber, getData, updateID, resetPageNum
             {
                 genresList.map((item)=>{
                     return (
-                        <span key={item.id} onClick={getGenreId} className={movieId==item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
+                        <span key={item.id} onClick={getGenreId} className={movieId===item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
                     )
                 })
             }

@@ -32,14 +32,15 @@ const SingleMovieDetail = () => {
        navigate(-1)
     }
 
-    //console.log(path)
+    
     useEffect(()=>{
-        dispatch(getDetails({type, id}))
-        console.log(detailsList,'taiiiiiiiiiiii')
+        dispatch(getDetails({type, id})) 
+        
+         // eslint-disable-next-line
     },[id])
     
 
-    //console.log(id, 'iddddddd')
+    
     if(isLoading){
         return <Loader/>
     }
@@ -62,7 +63,7 @@ const SingleMovieDetail = () => {
         <button onClick={goBack} className='back_btn'>Go back</button>
         <div className='movie_detail_container'>
             <div className='movie_detail_image_container'>
-                <img src={!poster_path ? noPoster : `${img_500}${poster_path}`} alt='image'></img>
+                <img src={!poster_path ? noPoster : `${img_500}${poster_path}`} alt='movie_image'></img>
             </div>
             <div className='movie_detail_content'>
                 <div className='movie_detail_heading'>
@@ -127,7 +128,7 @@ const SingleMovieDetail = () => {
                 </div>
                 <div className='btn_container'>
                     <button className='bookmark_btn'><BsBookmark className='btn_icon'/>Add to Bookmark</button>
-                    <a href={`https://www.youtube.com/watch?v=${videos?.results[0]?.key}`} target="_blank"><button className='youtube_btn'><AiFillYoutube className='btn_icon'/> Watch trailer</button></a>
+                    <a href={`https://www.youtube.com/watch?v=${videos?.results[0]?.key}`} rel="noreferrer" target="_blank"><button className='youtube_btn'><AiFillYoutube className='btn_icon'/> Watch trailer</button></a>
                 </div>
             </div>
         </div>
