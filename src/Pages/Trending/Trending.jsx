@@ -8,6 +8,7 @@ import { noPoster, img_500 } from '../../config/config';
 import {BsBookmarkHeart} from 'react-icons/bs'
 import { updatePageNumber } from '../../features/trendingSlice';
 
+
 const Trending = () => {
 
   const {isLoading,pageNumber,trendingList, pageCount} = useSelector((state) =>state.trending);
@@ -22,8 +23,8 @@ const Trending = () => {
   if(isLoading){
 
     return <>
-       <div className='trending_container'>
-        <div className='trending_heading' >
+       <div className='page_container'>
+        <div className='page_heading' >
            <h2><AiTwotoneFire className='trending_icon'/>Trending</h2>
            <p>These are the most popular movies and TV shows this week</p>
         </div>
@@ -35,8 +36,8 @@ const Trending = () => {
    
   }
   return (
-    <div className='trending_container'>
-        <div className='trending_heading' >
+    <div className='page_container'>
+        <div className='page_heading' >
            <h2><AiTwotoneFire className='trending_icon'/>Trending</h2>
            <p>These are the most popular movies and TV shows this week</p>
         </div>

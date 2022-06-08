@@ -60,6 +60,7 @@ const Search = () => {
                    return <SingleMovie
                            key={movie.id}
                            data={movie}
+                           media_type={movie.media_type}
                          />
                 })
             }

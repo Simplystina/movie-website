@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Catamaran;
+  font-family: 'Rubik', 'Bahnschrift', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(0, 36, 44);
@@ -10,15 +10,17 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-family: Catamaran;
 }
 
 .page_container{
   width: 80%;
   margin: 0 auto 2rem auto;
 }
-
+.bookmark_page_container{
+  margin-bottom: 7rem;
+}
 .page_heading{
-  
   margin-top: -15px;
   line-height: 0;
   color: white;
@@ -34,7 +36,7 @@ html {
   margin-top: 0;
 }
 .page_icon{
-color: rgb(6, 114, 6);
+color: rgb(16, 231, 16);
 margin-right: 10px;
 }
 

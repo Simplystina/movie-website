@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
 import './Movies.css'
 import {BiMoviePlay} from 'react-icons/bi'
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,9 +23,9 @@ const genresList = [
 ]
 const Movies = () => {
 
-   
+  const mainElement = useRef()
 
-    const {isLoading, pageNumber,moviesList, movieId, pageCount} = useSelector((state) =>state.movies);
+  const {isLoading, pageNumber,moviesList, movieId, pageCount} = useSelector((state) =>state.movies);
   const dispatch = useDispatch()
   
   
@@ -33,8 +33,10 @@ const Movies = () => {
       console.log(pageNumber,'recent pagenumber', movieId,'movieid')
     dispatch(getMovies({ movieId, pageNumber}))
     window.scrollTo(0, 0)
-    //console.log(moviesList,'movieList')
+    
   },[pageNumber])
+
+  
 
   if(isLoading){
       return(
@@ -61,12 +63,13 @@ const Movies = () => {
                updateID={updateID}
                resetPageNumber={resetPageNumber}
                />
-        <div className='movies_container'>
+        <div className='movies_container' ref={mainElement}>
             {
                  moviesList.map((movie)=>{
                      return(
                          <SingleMovie
-                          media_type='Movie'
+                          key={movie.id}
+                          media_type='movie'
                            data={movie}
                          />
                      )

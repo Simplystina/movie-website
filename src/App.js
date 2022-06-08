@@ -1,6 +1,6 @@
 import React  from "react";
 import {Routes, Route, BrowserRouter as Router} from 'react-router-dom'
-import {Home,Trending, Movies, TvShows, Search, SingleMovieDetail} from './Pages/index'
+import {Home,Trending, Movies, TvShows, Search, SingleMovieDetail, Bookmark} from './Pages/index'
 
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
              <Route  index path='movies' element={<Movies/>}/>
              <Route  index path='tvshows' element={<TvShows/>}/>
              <Route  index path='search' element={<Search/>}/>
-             <Route path=':pathname/:id' element={<SingleMovieDetail/>}/>
-          </Route>
-          
+             <Route path=':path/:id' element={<SingleMovieDetail/>}/>
+             <Route index path='bookmark' element={<Bookmark/>}/>
+          </Route> 
       </Routes>
     </Router>
     

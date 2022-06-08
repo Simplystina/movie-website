@@ -4,6 +4,7 @@
     left: 0;
     right: 0;
     background-color: rgb(1, 22, 27);
+    z-index: 20;
 }
 .navigation_footer{
     display: flex;

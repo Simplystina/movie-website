@@ -30,10 +30,10 @@
     border-radius: 10px;
 
 }
-.movie_icon_container{
-    position: absolute;
-    right: 8%;
-    bottom: 10%;
+.movie_bookmark_container{
+     position: absolute;
+     top: 60%;
+     right: 10%;
     background-color: #045061;
     border-radius: 50%;
     width: 50px;
@@ -42,18 +42,24 @@
     justify-content: center;
     align-items: center;
     transition: all .3s linear;
-    
+    z-index: 20;
+   
 }
-.movie_icon{
+.movie_bookmark{
     font-size: 25px;
     color: rgba(255, 255, 255, 0.849);
+   
 }
-.single_movie_card:hover .movie_icon_container{
+
+.single_movie_card:hover .movie_bookmark_container{
     background-color: #01181d;
     
 }
-
-.single_movie_card:hover .movie_icon{
+.bookmarked{
+    background-color: #0bc6f0;
+    color: #04232a;
+}
+.single_movie_card:hover .movie_bookmark{
     color: #0ad2ff;
     
 }

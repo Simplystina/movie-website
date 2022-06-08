@@ -1,0 +1,148 @@
+.back_btn{
+    background-color: rgb(129, 226, 145);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0;
+}
+
+.movie_detail_container{
+    display: flex;
+}
+.movie_detail_image_container{
+    width: 50%;
+}
+.movie_detail_image_container img{
+    width: 100%;
+    object-fit: cover;
+}
+.movie_detail_content{
+    width: 50%;
+    margin-left: 20px;
+    margin-bottom: 4rem;
+   
+}
+.movie_detail_heading h2{
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    
+}
+.movie_detail_heading h4{
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.movie_detail_heading p{
+    color: rgba(255, 255, 255, 0.354);
+    font-size: 20px;
+    margin: 7px 0;
+}
+.movie_detail_genre {
+    margin: 30px 0;
+}
+.movie_detail_genre span{
+    padding: 10px;
+    color: white;
+    background-color: rgba(2, 15, 18, 0.751);
+    border-radius: 8px;
+    margin: 0 5px;
+}
+.movie_detail_text{
+    color: white;
+    line-height: 27px;
+   font-size: 16px;
+}
+.movie_detail_rating{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.movie_detail_rating span{
+    color: blue;
+}
+.cast_header{
+    color: white;
+    font-size: 17px;
+}
+.cast_images_container{
+    width: 100%;
+    z-index: 999 !important;
+
+}
+.cast_image_container{
+   margin: 0;
+   border-radius: 0px;
+   line-height: 0;
+   display: flex;
+   flex-direction: column;
+  
+}
+.cast_image_container p{
+    color: white;
+}
+.cast_image{
+    object-fit: contain;
+    width: 70%;
+    border-radius: 5px;
+}
+.cast_names{
+    height: 20%;
+}
+.similar{
+    line-height: 30px;
+    margin: 20px 0 20px 0;
+   
+}
+.similar_heading{ 
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-right: 6px;
+}
+.movie_detail_links{
+    color: rgba(255, 255, 255, 0.669);
+    text-decoration: none;
+    padding: 2px;
+    font-size: 16px;
+    transition: all .3s linear;
+}
+
+.movie_detail_links:hover{
+    color: rgb(88, 210, 108);
+}
+.btn_container{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+.bookmark_btn{
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(83, 219, 105);
+    background-color: transparent;
+    border: 1px solid rgb(83, 219, 105);
+}
+.youtube_btn{
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+} 
+a{
+    text-decoration: none;
+}
+.btn_icon{
+    margin-left: 10px;
+}
+.youtube_btn .btn_icon{
+    font-size: 25px;
+    color: white;
+}

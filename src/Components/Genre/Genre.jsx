@@ -21,7 +21,7 @@ const Genre = ({genresList, movieId, pageNumber, getData, updateID, resetPageNum
             {
                 genresList.map((item)=>{
                     return (
-                        <span onClick={getGenreId} className={movieId==item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
+                        <span key={item.id} onClick={getGenreId} className={movieId==item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
                     )
                 })
             }

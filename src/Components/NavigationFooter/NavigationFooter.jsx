@@ -42,7 +42,7 @@ const NavigationFooter = () => {
                  </NavLink>
              </div>
              <div className='navigation_footer_content'>
-                 <NavLink to='' className='nav_footer_links'>
+                 <NavLink to='bookmark' className='nav_footer_links'>
                     <span><BsFillBookmarkHeartFill/></span>
                     <p>Bookmark</p>
                  </NavLink>
