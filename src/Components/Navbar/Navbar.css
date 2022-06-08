@@ -16,6 +16,20 @@
 .navigation_footer_content{
     text-align: center;
 }
-.navigation_footer_content p{
 
+@media screen and (max-width: 750px) {
+    .navbar-image-container{
+        margin: 0 35px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .navbar-image-container{
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .navbar-image-container{
+        width:  130px;
+    }
 }

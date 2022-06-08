@@ -21,22 +21,64 @@ html {
   margin-bottom: 7rem;
 }
 .page_heading{
-  margin-top: -15px;
-  line-height: 0;
   color: white;
+  margin-bottom: 0;
+  margin-top: 15px;
 }
 .page_heading h2{
   display: flex;
   align-items: center;
   font-size: 30px;
+  margin: 10px 0 10px 0;
 }
 .page_heading p{
   font-size: 20px;
   padding-top: 0;
   margin-top: 0;
+  line-height: 25px;
+
 }
 .page_icon{
 color: rgb(16, 231, 16);
 margin-right: 10px;
 }
 
+
+@media screen and (max-width:1189px) {
+  .page_container{
+     width: 90%;
+
+  }
+}
+
+@media screen and (max-width:700px) {
+  .page_heading h2{
+    font-size: 25px;
+
+  }
+  .page_heading p{
+    font-size: 16px;
+  }
+  .page_icon{
+    margin-right: 7px;
+    }
+}
+@media screen and (max-width:700px) {
+  .page_heading h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .page_heading p{
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width:376px) {
+  .page_heading p{
+    font-size: 14px;
+  }
+  .page_icon{
+    margin-right: 5px;
+    }
+}

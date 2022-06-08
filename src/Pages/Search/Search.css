@@ -46,3 +46,36 @@
      font-size: 18px;
      margin-left: 15px;
  }
+
+ @media screen and (max-width:609px) {
+    .search_container{
+        width: 85%;
+    }
+    ::placeholder{
+        font-size: 16px;
+     }
+  }
+
+  @media screen and (max-width:415px) {
+    .search_container{
+        width: 90%;
+    }
+    ::placeholder{
+        font-size: 14px;
+     }
+     .search_clear_btn{
+        font-size: 14px;
+     }
+  }
+
+  @media screen and (max-width:355px) {
+    .search_container{
+        width: 100%;
+    }
+    ::placeholder{
+        font-size: 12px;
+     }
+     .search_clear_btn{
+        font-size: 12px;
+     }
+  }

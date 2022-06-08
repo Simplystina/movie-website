@@ -25,7 +25,7 @@ const Trending = () => {
     return <>
        <div className='page_container'>
         <div className='page_heading' >
-           <h2><AiTwotoneFire className='trending_icon'/>Trending</h2>
+           <h2><AiTwotoneFire className='page_icon'/>Trending</h2>
            <p>These are the most popular movies and TV shows this week</p>
         </div>
            <Loader/>
@@ -38,7 +38,7 @@ const Trending = () => {
   return (
     <div className='page_container'>
         <div className='page_heading' >
-           <h2><AiTwotoneFire className='trending_icon'/>Trending</h2>
+           <h2><AiTwotoneFire className='page_icon'/>Trending</h2>
            <p>These are the most popular movies and TV shows this week</p>
         </div>
           <div className='movies_container'>

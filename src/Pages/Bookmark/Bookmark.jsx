@@ -29,6 +29,8 @@ const Bookmark = () => {
                 bookmarkList.map((movie)=>{
                     return (
                         <SingleMovie
+                           key={movie.id}
+                            media_type='movie'
                             data={movie}
                          />
                     )

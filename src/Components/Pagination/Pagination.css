@@ -34,7 +34,9 @@
     margin:  3px;
     border-radius: 7px;
     background-color: #036479;
+    display: flex;
     text-align: center;
+    align-items: center;
     color: rgba(245, 245, 245, 0.753);
     font-size: 20px;
     cursor: pointer;
@@ -48,4 +50,36 @@
  .next:hover{
     background-color: rgb(42, 224, 42);
     color: #036479;
+ }
+
+
+ @media screen and (max-width:905px){
+    .next, .prev{
+        font-size: 16px;
+        padding: 5px;
+    }
+    .page_number{
+        font-size: 16px;
+    }
+ }
+ @media screen and (max-width:819px){
+    .next, .prev{
+        font-size: 16px;
+        padding: 0px 4px;
+        
+    }
+    .page_number{
+        font-size: 16px;
+        padding: 7px;
+    }
+ }
+ @media screen and (max-width:620px){
+    .next, .prev{
+        padding: 0px 6px;
+        font-size: 14px;
+    }
+    .page_number{
+        font-size: 14px;
+        padding: 6px 8px;
+    }
  }

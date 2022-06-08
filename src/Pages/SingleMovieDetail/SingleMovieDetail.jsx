@@ -86,7 +86,7 @@ const SingleMovieDetail = () => {
                 <div className='cast_images_container'>
                     <Swiper
                       spaceBetween={0}
-                      slidesPerView={5}
+                      slidesPerView={window.innerWidth<= 400? 3 : 5}
                       className="mySwiper"
                       autoplay={{
                         delay: 2000,
