@@ -5,6 +5,7 @@
     background-color: rgba(245, 245, 245, 0.084);
     position: relative;
     border-radius: 10px;
+    transition: all .3s linear;
 }
 .movie_image_container{
     position: relative;
@@ -104,8 +105,85 @@
     .single_movie_content p{
         font-size: 40px;
     }
-    .single_movie_card{
-        background-color: rgb(21, 240, 240);
+    
+}
+@media screen and (max-width:719px){
+    .single_movie_content{
+        opacity: 1 !important;
     }
+    .single_movie_content{
+        transform: translateY(0px) !important;
+        height: 25% !important;
+    }
+    .movie_image_container{
+        padding-bottom: 0px !important;
+        height: 75% !important;
+    }
+    .movie_image{
+        height: 100% !important;
+
+    }
+    .movie_bookmark_container{
+        top: 50%;
+    }
+    .single_movie_card:hover .movie_image_container{
+        transform: translateY(0px) !important;
+    }
+    .single_movie_card:hover{
+        border: 3px solid rgb(16, 231, 16);
+        transition: all .2s linear;
+    }
+}
+
+@media screen and (max-width:552px){
+    .single_movie_content{
+        padding: 20px 0;
+    }
+    .single_movie_content h2{
+        font-size: 16px !important;
+        margin-top: 25px;
+        line-height: 25px !important;
+    }
+    .single_movie_content p{
+        font-size: 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+@media screen and (max-width:422px){
+    .movie_bookmark_container{
+        width: 35px;
+        height: 35px;
+    }
+    .movie_bookmark{
+        font-size: 14px;
+    }
+    .single_movie_card{
+        height: 300px !important;
+    }
+}
+@media screen and (max-width:364px){
+    .single_movie_content h2{
+        margin-top: 15px;
+        font-size: 14px !important;
+        line-height: 17px !important;
+    }
+}
+@media screen and (max-width:300px){
+    .movie_image_container{
+        height: 69% !important;
+    }
+    .movie_image{
+        object-fit: contain;
+    }
+    .movie_bookmark_container{
+       top: 40%;
+    }
+    .single_movie_content h2{
+        margin-top: 5px;
+
+    }
+}
+@media screen and (max-width:270px){
     
 }

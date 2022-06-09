@@ -37,11 +37,8 @@ const SingleMovie = ({data, media_type}) => {
         const g = document.querySelectorAll(".movie_bookmark_container");
         for (let i= 0; i < g.length; i++) {
            const id =  parseInt(g[i].id)
-           //console.log(idList,id)
            if (idList.includes(id)) {
-               console.log(id,'coreeddd')
                g[i].classList.add('bookmarked')
-               console.log(idList.includes(id)) 
            }
         }
       },[])
@@ -69,14 +66,14 @@ const SingleMovie = ({data, media_type}) => {
    
     <div key={id}  className='single_movie_card'>
         <span className='movie_bookmark_container' ref={bookmarkElement} id={id} onClick={(e)=>bookMark(e,data,id)}><BsBookmarkHeart className='movie_bookmark'/></span>
-         <Link to={`/${type}/${id}`}>
+         <Link to={`/${type}/${id}`} >
             <div className='movie_image_container'>
                 <img className='movie_image' src={!poster_path ? noPoster : `${img_500}${poster_path}`} alt={name ||title}/>
             </div>
-            <div className='single_movie_content hide'>
-                <h2>{ 
-                    original_title?.length <20 || name?.length <20 ? original_title ||name 
-                        : `${original_title?.substring(0,20)}...` || `${name?.substring(0,20)}...`
+            <div className='single_movie_content hide'> 
+               <h2>{ original_title ?
+                        (original_title?.length <15 ? original_title : `${original_title?.substring(0,15)}...`) 
+                    : (name?.length <15? name : `${name?.substring(0,15)}...` )
                     }
                 </h2>
                 <p>{media_type === 'tv'? 'TV Show' : media_type }</p>
