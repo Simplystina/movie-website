@@ -7,7 +7,6 @@ import { getDetails } from '../../features/detailsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { Loader } from '../../Components'
 import { noPoster, img_500 } from '../../config/config';
-import 'react-animated-slider/build/horizontal.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/pagination";
@@ -35,7 +34,7 @@ const SingleMovieDetail = () => {
     
     useEffect(()=>{
         dispatch(getDetails({type, id})) 
-        
+
          // eslint-disable-next-line
     },[id])
     

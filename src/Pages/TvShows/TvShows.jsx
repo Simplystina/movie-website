@@ -30,7 +30,9 @@ const TvShows = () => {
     console.log(pageNumber,'recent pagenumber', movieId,'movieid')
     dispatch(getTvShows({ movieId, pageNumber}))
      window.scrollTo(0, 0)
-     //console.log(moviesList,'movieList')
+
+     
+     // eslint-disable-next-line
     },[pageNumber])  
 
   if(isLoading){

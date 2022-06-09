@@ -1,14 +1,14 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Navbar, NavigationFooter } from '../../Components'
-import Trending from '../Trending/Trending'
 import './Home.css'
 const Home = () => {
 
   
   return (
     <div className='home_container'>
-       <Navbar/>
+       <Navbar/>/
+       
        <Outlet/>
        <NavigationFooter/>
     </div>

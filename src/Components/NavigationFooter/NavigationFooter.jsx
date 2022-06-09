@@ -4,7 +4,6 @@ import {AiTwotoneFire} from 'react-icons/ai'
 import {BiMoviePlay, BiSlideshow, BiSearchAlt2} from 'react-icons/bi'
 import {BsFillBookmarkHeartFill} from 'react-icons/bs'
 import {NavLink} from 'react-router-dom'
-import { clearState } from '../../features/searchSlice'
 import { useDispatch } from 'react-redux'
 
 const NavigationFooter = () => {

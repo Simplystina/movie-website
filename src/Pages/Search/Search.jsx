@@ -4,7 +4,7 @@ import './Search.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSearch, updateSearchWord, clearState ,updatePageNumber} from '../../features/searchSlice'
 import { Loader, Pagination, SingleMovie } from '../../Components'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation} from 'react-router-dom'
 
 const Search = () => {
 
@@ -13,8 +13,7 @@ const Search = () => {
     const [value, setValue] = useState()
 
     const location = useLocation()
-    const navigate = useNavigate()
-   
+
     const handleChange = (e)=>{
         setValue(e.target.value)
         dispatch(updateSearchWord(e.target.value))
@@ -65,7 +64,7 @@ const Search = () => {
                 })
             }
         </div> 
-       {searchResults.length != 0 && 
+       {searchResults.length !== 0 && 
        <Pagination 
             updatePageNumber={updatePageNumber} 
             pageNumber={pageNumber}

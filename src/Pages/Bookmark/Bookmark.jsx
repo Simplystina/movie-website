@@ -2,19 +2,16 @@ import React,{useEffect} from 'react'
 import {BsBookmarkFill} from 'react-icons/bs'
 import { useDispatch, useSelector } from 'react-redux'
 import { SingleMovie } from '../../Components'
-import {updateBookmarkList, getBookmarkList, updateIDList} from '../../features/bookmarkSlice'
+import { getBookmarkList} from '../../features/bookmarkSlice'
 
 const Bookmark = () => {
 
     const dispatch = useDispatch()
-    const {isLoading, bookmarkList} = useSelector((state) =>state.bookmark);
+    const {bookmarkList} = useSelector((state) =>state.bookmark);
 
     useEffect(() => {
         const bookmarks = JSON.parse(localStorage.getItem('Bookmarks'));
         dispatch(getBookmarkList(bookmarks))
-
-        const bookmarkId = JSON.parse(localStorage.getItem('BookmarksID'));
-        //dispatch(updateIDList(bookmarkId))
        
       }, []);
 

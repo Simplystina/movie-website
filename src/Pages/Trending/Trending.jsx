@@ -4,8 +4,6 @@ import './Trending.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { getTrending } from '../../features/trendingSlice';
 import { Loader, Pagination, SingleMovie } from '../../Components';
-import { noPoster, img_500 } from '../../config/config';
-import {BsBookmarkHeart} from 'react-icons/bs'
 import { updatePageNumber } from '../../features/trendingSlice';
 
 
