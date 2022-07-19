@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react'
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import './SingleMovie.css'
 import { noPoster, img_500 } from '../../config/config';
 import {BsBookmarkHeart} from 'react-icons/bs'
@@ -50,7 +48,8 @@ const SingleMovie = ({data, media_type}) => {
             dispatch(removeID(id))
             toast("Item removed from bookmark!");
 
-        }else{
+        }
+        else{
             e.currentTarget.classList.add('bookmarked')
             dispatch(updateBookmarkList(data))
             dispatch(updateIDList(id))

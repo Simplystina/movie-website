@@ -13,15 +13,24 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay} from "swiper";
 import { clearState } from '../../features/searchSlice'
-
+import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import { updateBookmarkList,updateIDList, getIDList, removeID, removeFromList } from '../../features/bookmarkSlice';
 
 const SingleMovieDetail = () => {
 
     const navigate = useNavigate();
-    const {detailsList, isLoading} = useSelector((state)=>state.details)
     const dispatch = useDispatch()
-
     let { id, path } = useParams();
+
+    const {detailsList, isLoading} = useSelector((state)=>state.details)
+    const {bookmarkList,idList} = useSelector((state) => state.bookmark);
+
+    const setLocalStorage = ()=>{
+        localStorage.setItem('Bookmarks', JSON.stringify(bookmarkList));
+        localStorage.setItem('BookmarksID',JSON.stringify(idList))
+        return
+    }
 
 
     const  type = path ==='tvshow'? 'tv':'movie'
@@ -30,15 +39,15 @@ const SingleMovieDetail = () => {
         dispatch(clearState())
        navigate(-1)
     }
-
+     const [bookmarked,setBookmarked] = useState(false)
     
     useEffect(()=>{
         dispatch(getDetails({type, id})) 
-
-         // eslint-disable-next-line
+        
     },[id])
-    
 
+    
+   
     
     if(isLoading){
         return <Loader/>
@@ -126,11 +135,22 @@ const SingleMovieDetail = () => {
 
                 </div>
                 <div className='btn_container'>
-                    <button className='bookmark_btn'><BsBookmark className='btn_icon'/>Add to Bookmark</button>
+                    <button id={id}  className='bookmark_btn'><BsBookmark className='btn_icon'/>Add to bookmark</button>
                     <a href={`https://www.youtube.com/watch?v=${videos?.results[0]?.key}`} rel="noreferrer" target="_blank"><button className='youtube_btn'><AiFillYoutube className='btn_icon'/> Watch trailer</button></a>
                 </div>
             </div>
         </div>
+        <ToastContainer 
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
     </div>
   )
 }

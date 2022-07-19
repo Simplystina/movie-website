@@ -10,8 +10,8 @@ function App() {
       <Routes>
           <Route exact={true} path='/' element={<Home/>}>
              <Route  index path='/' element={<Trending/>}/>
-             <Route  index path='movies' element={<Movies/>}/>
-             <Route  index path='tvshows' element={<TvShows/>}/>
+             <Route  index path='/movies' element={<Movies/>}/>
+             <Route  index path='/tvshows' element={<TvShows/>}/>
              <Route  index path='search' element={<Search/>}/>
              <Route path=':path/:id' element={<SingleMovieDetail/>}/>
              <Route index path='bookmark' element={<Bookmark/>}/>

@@ -24,7 +24,7 @@ const genresList = [
 const Movies = () => {
 
   const mainElement = useRef()
-
+  
   const {isLoading, pageNumber,moviesList, movieId, pageCount} = useSelector((state) =>state.movies);
   const dispatch = useDispatch()
   
