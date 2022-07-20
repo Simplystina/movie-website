@@ -4,7 +4,6 @@ import { customFetch } from '../utils/axios'
 const initialState ={
     trendingList: [],
     isLoading:true,
-    offset: 0,
     perPage:20,
     pageCount: 0,
     pageNumber:1,
@@ -35,10 +34,8 @@ const trendingSlice = createSlice({
             return {
                 ...state,
                 pageNumber :action.payload,
-            }
-            
-        }
-        
+            }  
+        } 
     },
     extraReducers:{
         [getTrending.pending]: (state)=>{
@@ -50,7 +47,7 @@ const trendingSlice = createSlice({
             state.pageCount = payload.total_pages
         },
         [getTrending.rejected]: (state)=>{
-            state.isLoading = true
+            state.isLoading = false
         }
     }
     

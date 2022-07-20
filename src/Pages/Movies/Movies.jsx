@@ -30,7 +30,7 @@ const Movies = () => {
   
   
   useEffect(()=>{
-      console.log(pageNumber,'recent pagenumber', movieId,'movieid')
+      //console.log(pageNumber,'recent pagenumber', movieId,'movieid')
     dispatch(getMovies({ movieId, pageNumber}))
     window.scrollTo(0, 0)
     

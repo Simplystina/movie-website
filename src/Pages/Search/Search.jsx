@@ -12,7 +12,7 @@ const Search = () => {
     const {isLoading, searchWord, searchResults, errorMessage, pageCount, pageNumber} = useSelector((state)=>(state.search))
     const [value, setValue] = useState()
 
-    const location = useLocation()
+   
 
     const handleChange = (e)=>{
         setValue(e.target.value)
@@ -26,8 +26,6 @@ const Search = () => {
 
     
     useEffect(()=>{
-        console.log(location.state, 'locationnnnnn')
-        //console.log(searchWord.trim() !== '')
         if(searchWord.trim() !== ''){
             dispatch(getSearch({ value:searchWord, pageNumber}))
         }

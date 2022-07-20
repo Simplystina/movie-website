@@ -19,8 +19,8 @@ export const getMovies = createAsyncThunk(
         try {
             const resp = await customFetch.get(
                 movieId ===0? `/discover/movie?api_key=${api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}` : `/discover/movie?api_key=${api_key}&with_genres=${movieId}&page=${pageNumber}`
-                )
-            console.log(resp.data,'rapppppp')
+                ) 
+           // console.log(resp.data,'rapppppp')
             return resp.data
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data.msg)

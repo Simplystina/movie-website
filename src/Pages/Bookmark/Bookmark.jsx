@@ -12,8 +12,7 @@ const Bookmark = () => {
     useEffect(() => {
         const bookmarks = JSON.parse(localStorage.getItem('Bookmarks'));
         dispatch(getBookmarkList(bookmarks))
-       
-      }, []);
+    }, []);
 
   return (
     <div className='page_container bookmark_page_container'>

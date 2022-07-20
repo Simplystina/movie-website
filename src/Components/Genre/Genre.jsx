@@ -7,9 +7,7 @@ const Genre = ({genresList, movieId, pageNumber, getData, updateID, resetPageNum
     const dispatch = useDispatch()
 
     const getGenreId = (e)=>{
-        let id = e.currentTarget.id
-        
-        console.log(id,'idddddddd')
+        let id = e.currentTarget.id 
         dispatch(updateID(id))
         dispatch(getData({movieId:id,pageNumber}))
         dispatch(resetPageNumber())
@@ -20,7 +18,7 @@ const Genre = ({genresList, movieId, pageNumber, getData, updateID, resetPageNum
             {
                 genresList.map((item)=>{
                     return (
-                        <span key={item.id} onClick={getGenreId} className={movieId===item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
+                        <span key={item.id} onClick={getGenreId} className={movieId ==item.id? 'genre active': 'genre not_active'} id={item.id}>{item.genre}</span>
                     )
                 })
             }

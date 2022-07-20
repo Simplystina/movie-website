@@ -20,18 +20,16 @@ const SingleMovie = ({data, media_type}) => {
         return
     }
 
-    const bookmarkElement = useRef();
+    
    
     useEffect(()=>{
         setLocalStorage()
     },[bookmarkList,idList])
      
+
     useEffect(()=>{
         const bookmarkId = JSON.parse(localStorage.getItem('BookmarksID'));
         dispatch(getIDList(bookmarkId))
-    },[])
-
-    useEffect(()=>{
         const g = document.querySelectorAll(".movie_bookmark_container");
         for (let i= 0; i < g.length; i++) {
            const id =  parseInt(g[i].id)
@@ -64,7 +62,7 @@ const SingleMovie = ({data, media_type}) => {
   return (
    
     <div key={id}  className='single_movie_card'>
-        <span className='movie_bookmark_container' ref={bookmarkElement} id={id} onClick={(e)=>bookMark(e,data,id)}><BsBookmarkHeart className='movie_bookmark'/></span>
+        <span className='movie_bookmark_container' id={id} onClick={(e)=>bookMark(e,data,id)}><BsBookmarkHeart className='movie_bookmark'/></span>
          <Link to={`/${type}/${id}`} >
             <div className='movie_image_container'>
                 <img className='movie_image' src={!poster_path ? noPoster : `${img_500}${poster_path}`} alt={name ||title}/>

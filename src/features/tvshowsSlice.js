@@ -15,12 +15,12 @@ export const getTvShows = createAsyncThunk(
     'tvshows/getTvShows',
     
     async({movieId,pageNumber}, thunkAPI )=>{
-        console.log(movieId,pageNumber,'in api hereeeeee')
+        //console.log(movieId,pageNumber,'in api hereeeeee')
         try {
             const resp = await customFetch.get(
                 movieId ===0? `/discover/tv?api_key=${api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNumber}` 
                 : `/discover/tv?api_key=${api_key}&with_genres=${movieId}&page=${pageNumber}`)
-            console.log(resp.data,'tvshowwwss')
+            //console.log(resp.data,'tvshowwwss')
             return resp.data
         } catch (error) {
             return thunkAPI.rejectWithValue(error.response.data.msg)
